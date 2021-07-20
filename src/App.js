@@ -107,7 +107,7 @@ class App extends React.Component {
     this.setState({longitude: position.coords.longitude});
     this.fetchData();
   }
-// (`http://api.openweathermap.org/data/2.5/weather?lat=${this.state.latitude}&lon=${this.state.longitude}&appid=${APIKey}&units=metric`)
+
   fetchData = () =>{
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${this.state.latitude}&lon=${this.state.longitude}&appid=${process.env.REACT_APP_SECRET_KEY}&units=metric`)
     .then(response => response.json())
@@ -160,5 +160,5 @@ class App extends React.Component {
   }
 }
 
-//     <img src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt={weatherData.weather[0].description} />
+//<img src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt={weatherData.weather[0].description} />
 export default App;
