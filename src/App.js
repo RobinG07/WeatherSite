@@ -144,16 +144,19 @@ class App extends React.Component {
     }else{
       return (
       <div className={'App ' + (this.isDay() ? '' : 'night')}>
+        <div className='icon'>
         <ReactAnimatedWeather
             icon={iconMap.get(weatherData.weather[0].icon)}
             color={defaults.color}
             size={defaults.size}
             animate={defaults.animate}
           />
+        </div>
         <div>
           <h3>{Math.round(weatherData.main.temp)} °C</h3>
           <h3>{weatherData.weather[0].main}</h3>
         </div>
+        <span>© 2021 Robin Ghrayche</span>
       </div>
       );
     }

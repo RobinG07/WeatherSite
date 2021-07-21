@@ -46,3 +46,11 @@
     transform: rotate(360deg);
   }
 }
+
+.icon {
+  margin-top: auto;
+}
+
+span {
+  margin-top: auto;
+}
